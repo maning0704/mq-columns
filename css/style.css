@@ -1,0 +1,48 @@
+@import url(sanitize.css);
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px){
+    .column {
+        width: 50%;
+    }
+}
+
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px){
+    .column {
+        width: 100%;
+    }
+}
+
+body {
+    width: 80%;
+    margin-right: auto;/*margn-left: auto と組み合わせることにより、中央ぞろえができる*/
+    margin-left: auto;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+p {
+    margin-left: 30px;
+}
+
